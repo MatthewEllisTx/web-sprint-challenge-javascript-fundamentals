@@ -185,7 +185,11 @@ CuboidMaker.prototype.surfaceArea = function(){
 Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
 Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
-const cuboid = new CuboidMaker(4, 5, 5);
+const cuboid = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5
+});
 console.log('Cuboid', cuboid);
 console.log('Cuboid Length', cuboid.length);
 
@@ -213,7 +217,11 @@ class CuboidMakerTwo{
   }
 }
 
-const cuboidTwo = new CuboidMakerTwo(4, 5, 5);
+const cuboidTwo = new CuboidMakerTwo({
+  length: 4,
+  width: 5,
+  height: 5
+});
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 console.log('cuboidTwo volume', cuboidTwo.volume()); // 100
@@ -225,8 +233,23 @@ console.log('cuboidTwo surface area', cuboidTwo.surfaceArea()); // 130
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
 
+// I'm not really sure what you want me to do because the formulas for a cube is the same as a cubiod, just all sides are equal so you can simplify to x^3 and 6*x^2
+// The read me says to comment out stretch goals but this doesn't interfere with anything so I think it should be fine
 
+class CubeMaker extends CuboidMakerTwo{
+  constructor(dimension){
+    super({
+      length: dimension,
+      width: dimension,
+      height: dimension
+    });
+  }
+}
 
+const cube = new CubeMaker(5);
+console.log('cube', cube);
+console.log('cube volume', cube.volume());
+console.log('cube surface area', cube.surfaceArea());
 
 
 
