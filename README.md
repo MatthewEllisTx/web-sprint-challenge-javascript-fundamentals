@@ -27,13 +27,27 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+    .forEach loops over every element of an array and does not return a new array. return statement optional
+    .map loops through an array and does an operation on each element. makes a new array contataing the result of the operations. requires a return statement.
+
 2. Explain the difference between a callback and a higher order function.
+
+    higher order functions take a callback function as a parameter. .map is an example of a higher order function. you provide it with the callback function
 
 3. What is closure?
 
+    when a function looks outside of it's scope to find a variable.
+
 4. Describe the four rules of the 'this' keyword.
 
+    implicit binding- look to the left of the . to see what it is bound to. for example, in kitty.pet() this would be bound to kitty
+    explecit binding- .call(this)
+    new binding- when making a new object in a constructor, this is bound to that new objet
+    window binding- when this has nothing else to bind to it binds to the global scope, or the window in a browser enviroment
+
 5. Why do we need super() in an extended class?
+
+    it calls the parent constructor so the child has those inherited attributes defined
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
